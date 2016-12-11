@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<title>Touch</title>
+	<link rel="stylesheet" href="./simulator.css">
+	<style>
+		.screen{
+			background-color:#fff !important;
+		}
+	</style>
+</head>
+
+<body>
+
+	<div class="simulator">
+		<div class="caption">Simulator</div>
+		<div class="screen">
+			<div id="app" m:on:tap="say('tap')" m:on:swipe="say('swipe')">
+				{{name}}
+			</div>
+		</div>
+		<div class="home"><span></span></div>
+	</div>
+
+	<script src="../dist/mokit.min.js"></script>
+	<script src="../dist/mokit-touch.min.js"></script>
+	<script src="./app.js"></script>
+</body>
+
+</html>
