@@ -75,6 +75,8 @@ html, body {
     width: 100%;
     height: 100%;
     cursor: default;
+    overflow: hidden;
+    border-radius: 0;
   }
   .simulator .caption, .simulator .home {
     display: none;
