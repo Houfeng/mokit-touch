@@ -8,7 +8,6 @@
     say: function (name) {
       this.name = name;
     }
-
   }).start();
 
 })(mokit);

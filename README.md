@@ -1,4 +1,4 @@
-mokit 的转场动画插件
+mokit touch 事件支持
 
 # 安装
 ```sh
@@ -6,18 +6,37 @@ npm install mokit-transition --save-dev
 ```
 
 # 使用
+
+HTML:
+
+```HTML
+<div id="app" m:on:tap="say('tap')" m:on:swipe="say('swipe')">
+  {{name}}
+</div>
+```
+
+JavaScript:
+
 ```js
 const mokit = require('mokit');
-const Transition = require('mokit-transition');
+const touch = require('mokit-touch');
 
-mokit.use(Transition);
+mokit.use(touch);
 
-const TheComponent = new mokit.Component({
-  template: '<m:view m:prop:transition="transition"></m:view>',
-  transition: new mokit.Transition(2)
-});
+mokit({
+  element: document.getElementById('app'),
+  data: function () {
+    return { name: '' };
+  },
+  say: function (name) {
+    this.name = name;
+  }
+}).start();
 
-...
-...
+```
 
+# 所有事件
+```
+tap,taphold,dbltap,swipe,swipeup,swiperight,
+swipedown,swipeleft,pointdown,pointmove,pointup
 ```
