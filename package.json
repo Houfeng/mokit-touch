@@ -1,6 +1,6 @@
 {
   "name": "mokit-touch",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "mokit-touch",
   "main": "./lib/index.js",
   "scripts": {
@@ -47,6 +47,7 @@
     "webpack": "^1.13.3"
   },
   "dependencies": {
+    "mokit": "^3.0.0-beta34",
     "mokit-plugin": "^1.0.5"
   }
 }
